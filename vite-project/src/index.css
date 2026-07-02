@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+/* ── Light Mode Math Notebook Grid (Default) ─────────────────── */
+body {
+    background-color: #f8fafc; /* Slate 50 */
+    background-image:
+        /* Thick lines */
+            linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+                /* Fine lines */
+            linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+
+    background-size:
+            50px 50px,
+            50px 50px,
+            10px 10px,
+            10px 10px;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* ── Dark Mode Math Notebook Grid ────────────────────────────── */
+.dark body {
+    background-color: #080808;
+    background-image:
+            linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Light mode scrollbar */
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb { background: #333; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #555; }
