@@ -3,12 +3,12 @@ import { getAuth, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAZNrjLeJfCxfBr2GuRIbiH1KuLSDl4_jg",
-    authDomain: "collabworkspace-3a23c.firebaseapp.com",
-    projectId: "collabworkspace-3a23c",
-    storageBucket: "collabworkspace-3a23c.firebasestorage.app",
-    messagingSenderId: "911703956669",
-    appId: "1:911703956669:web:786e17de7903bc22e66bd4"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
